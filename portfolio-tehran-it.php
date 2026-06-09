@@ -2,9 +2,8 @@
 /**
  * Plugin Name: Portfolio Tehran IT
  * Plugin URI: https://tehranit.net
- * Description: A custom portfolio management plugin for Tehran IT. It adds a dedicated portfolio post type, portfolio categories, project information fields, and custom portfolio templates.
- * Version: 1.0.0
- * Author: Tehran IT
+ * Description: A lightweight developer-focused WordPress portfolio plugin with custom post type, portfolio categories, custom fields, reusable template parts, and theme-friendly portfolio templates. * Version: 1.0.0
+ * Author: Mohammadreza Ahadian (Tehran IT)
  * Author URI: https://tehranit.net
  * Text Domain: portfolio-tehran-it
  * Domain Path: /languages
