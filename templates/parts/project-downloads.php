@@ -22,7 +22,7 @@ $title_id = 'project-downloads-title-' . $post_id;
 $desc_id  = 'project-downloads-desc-' . $post_id;
 ?>
 
-<section class="sec sec-bg-dark sec-pt-4 sec-pb-5 singel"
+<section class="sec sec-bg-light sec-pt-4 sec-pb-5 singel"
          aria-labelledby="<?php echo esc_attr($title_id); ?>"
          aria-describedby="<?php echo esc_attr($desc_id); ?>">
 

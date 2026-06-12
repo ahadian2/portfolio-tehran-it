@@ -95,7 +95,7 @@ if (empty($image_alt)) {
                     
                     if (!empty($terms) && !is_wp_error($terms)) :
                     ?>
-                        <div class="portfolio-categories">
+                        <div class="portfolio-categories d-none d-lg-block">
                     
                             <span class="portfolio-categories-title">
                                 دسته‌بندی :

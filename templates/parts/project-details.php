@@ -16,7 +16,7 @@ $title_id = 'project-details-title-' . $post_id;
 $desc_id  = 'project-details-desc-' . $post_id;
 ?>
 
-<section class="sec sec-bg-dark sec-pt-5 sec-pb-5 portfolio-page"
+<section class="sec sec-bg-light sec-pt-5 sec-pb-5 portfolio-page"
          aria-labelledby="<?php echo esc_attr($title_id); ?>"
          aria-describedby="<?php echo esc_attr($desc_id); ?>"
          itemscope
@@ -28,7 +28,8 @@ $desc_id  = 'project-details-desc-' . $post_id;
             <header class="home-title mb-4 col-12">
 
                 <h2 id="<?php echo esc_attr($title_id); ?>">
-                    <?php echo esc_html('جزئیات پروژه ' . get_the_title()); ?>
+                    <span>جزئیات پروژه </span>
+                    <span class="d-none d-lg-inline-block"><?php echo esc_html(get_the_title()); ?></span>
                 </h2>
 
                 <p id="<?php echo esc_attr($desc_id); ?>">
@@ -39,7 +40,7 @@ $desc_id  = 'project-details-desc-' . $post_id;
         </div>
 
         <div class="row">
-            <div class="col-12 owl-4box owl-carousel owl-theme box-post box-post-img-150 box-post-p-2 box-post-bg-light owl-remove-dots"
+            <div class="col-12 owl-4box owl-carousel owl-theme box-post box-post-img-150 box-post-p-2 box-post-bg-dark owl-remove-dots"
                  role="list"
                  aria-label="<?php echo esc_attr('جزئیات فنی و اطلاعات پروژه ' . get_the_title()); ?>">
 

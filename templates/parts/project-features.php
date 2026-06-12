@@ -15,12 +15,13 @@ if (empty($features) || !is_array($features)) {
 $title_id = 'project-features-title-' . $post_id;
 ?>
 
-<section class="sec sec-bg-light sec-pt-5 sec-pb-5 portfolio-page" aria-labelledby="<?php echo esc_attr($title_id); ?>">
+<section class="sec sec-bg-dark sec-pt-5 sec-pb-5 portfolio-page" aria-labelledby="<?php echo esc_attr($title_id); ?>">
     <div class="container">
         <div class="row">
             <header class="home-title mb-4 col-12">
                 <h2 id="<?php echo esc_attr($title_id); ?>">
-                    <?php echo esc_html('ویژگی‌ها و امکانات پروژه ' . get_the_title()); ?>
+                    <span>ویژگی‌ها و امکانات پروژه </span>
+                    <span class="d-none d-lg-inline-block"><?php echo esc_html(get_the_title()); ?></span>
                 </h2>
 
                 <p id="project-features-desc">
@@ -30,7 +31,7 @@ $title_id = 'project-features-title-' . $post_id;
         </div>
 
         <div class="row">
-            <div class="col-12 owl-4box owl-carousel owl-theme box-post box-post-img-150 box-post-p-2 box-post-bg-dark owl-remove-dots"
+            <div class="col-12 owl-4box owl-carousel owl-theme box-post box-post-img-150 box-post-p-2 box-post-bg-light owl-remove-dots"
                  role="list"
                  aria-label="<?php echo esc_attr('ویژگی‌ها و امکانات پروژه ' . get_the_title()); ?>">
 

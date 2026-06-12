@@ -13,7 +13,7 @@ if (empty(trim(wp_strip_all_tags($content)))) {
 $title_id = 'portfolio-content-title-' . get_the_ID();
 ?>
 
-<section class="sec sec-bg-dark singel sec-py-4"
+<section class="sec sec-bg-light singel sec-py-4"
          id="content"
          aria-labelledby="<?php echo esc_attr($title_id); ?>">
 

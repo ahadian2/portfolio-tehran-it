@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<section class="sec sec-bg-light sec-pt-4 sec-pb-3 box-post box-post-img-full box-post-p-3 box-post-bg-dark">
+<section class="sec sec-bg-light sec-pt-4 sec-pb-3 box-post box-post-img-200 box-post-p-3 box-post-bg-dark portfolio-page">
     <div class="container">
         <div class="row">
 
@@ -20,10 +20,10 @@ if (!defined('ABSPATH')) {
 
                                     <?php if (has_post_thumbnail()) : ?>
 
-                                        <img src="<?php the_post_thumbnail_url('img-260-167'); ?>"
+                                        <img src="<?php the_post_thumbnail_url('img-261-147'); ?>"
                                              alt="<?php the_title_attribute(); ?>"
-                                             width="260"
-                                             height="167"
+                                             width="200"
+                                             height="113"
                                              loading="lazy"
                                              decoding="async"
                                              itemprop="image">
@@ -70,7 +70,7 @@ if (!defined('ABSPATH')) {
             <?php else : ?>
 
                 <div class="col-12">
-                    <p>هیچ نمونه‌کاری در این دسته یافت نشد.</p>
+                    <p class="no-post">هیچ نمونه‌کاری در این دسته یافت نشد.</p>
                 </div>
 
             <?php endif; ?>

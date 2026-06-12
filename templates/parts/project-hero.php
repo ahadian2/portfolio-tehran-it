@@ -38,14 +38,14 @@ $button_url = tit_20260606_get_setting(
 );
 ?>
 
-<section class="hero-c sec sec-scrim-55 sec-bg-img"
+<section class="hero-c sec sec-scrim-60 sec-bg-img"
          style="background-image:url('<?php echo esc_url($background_url); ?>')"
          role="banner"
          aria-labelledby="portfolio-title">
 
     <div class="container">
 
-        <div class="row sec-min-70vh">
+        <div class="row sec-min-50vh">
 
             <div class="col-12 d-flex flex-column justify-content-around text-center text-lg-start">
 

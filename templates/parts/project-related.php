@@ -42,7 +42,7 @@ if (!$related_query->have_posts()) {
 $title_id = 'related-portfolios-title-' . $post_id;
 ?>
 
-<section class="sec sec-bg-light sec-pt-4 sec-pb-5"
+<section class="sec sec-bg-dark sec-pt-4 sec-pb-5"
          id="related-portfolios"
          aria-labelledby="<?php echo esc_attr($title_id); ?>">
 
@@ -73,14 +73,14 @@ $title_id = 'related-portfolios-title-' . $post_id;
 
                 <div role="list"
                      aria-label="<?php echo esc_attr('لیست نمونه‌کارهای مرتبط با ' . get_the_title($post_id)); ?>"
-                     class="owl-4box owl-carousel owl-theme box-post box-post-img-full box-post-p-3 box-post-bg-dark owl-remove-dots">
+                     class="owl-4box owl-carousel owl-theme box-post box-post-img-200 box-post-p-3 box-post-bg-light owl-remove-dots">
 
                     <?php $position = 1; ?>
 
                     <?php while ($related_query->have_posts()) : ?>
                         <?php $related_query->the_post(); ?>
 
-                        <article class="item"
+                        <article class="item pt-1"
                                  role="listitem"
                                  itemprop="itemListElement"
                                  itemscope

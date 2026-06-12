@@ -32,6 +32,13 @@ class TIT_20260606_Settings {
 
         wp_enqueue_media();
 
+        wp_enqueue_style(
+            'tit-20260606-admin',
+            TIT_20260606_URL . 'assets/admin.css',
+            [],
+            TIT_20260606_VERSION
+        );
+
         wp_enqueue_script(
             'tit-20260606-admin',
             TIT_20260606_URL . 'assets/admin.js',
@@ -52,19 +59,14 @@ class TIT_20260606_Settings {
     public function sanitize_settings($input): array {
         return [
             'default_image' => isset($input['default_image']) ? absint($input['default_image']) : 0,
-
             'default_hero_image' => isset($input['default_hero_image']) ? absint($input['default_hero_image']) : 0,
-
             'archive_hero_image' => isset($input['archive_hero_image']) ? absint($input['archive_hero_image']) : 0,
-
             'consultation_button_text' => isset($input['consultation_button_text'])
                 ? sanitize_text_field($input['consultation_button_text'])
                 : '',
-
             'consultation_button_url' => isset($input['consultation_button_url'])
                 ? esc_url_raw($input['consultation_button_url'])
                 : '',
-
             'latest_posts_count' => isset($input['latest_posts_count'])
                 ? absint($input['latest_posts_count'])
                 : 8,
@@ -83,69 +85,94 @@ class TIT_20260606_Settings {
         $latest_posts_count = $settings['latest_posts_count'] ?? 8;
         ?>
 
-        <div class="wrap">
-            <h1>تنظیمات نمونه کارها</h1>
+        <div class="wrap tit-20260606-admin-page">
+
+            <div class="tit-20260606-admin-header">
+                <div>
+                    <h1>تنظیمات نمونه کارها</h1>
+                    <p>مدیریت تنظیمات عمومی پلاگین Portfolio Tehran IT</p>
+                </div>
+
+                <span class="tit-20260606-version">
+                    Version <?php echo esc_html(TIT_20260606_VERSION); ?>
+                </span>
+            </div>
 
             <form method="post" action="options.php">
                 <?php settings_fields('tit_20260606_settings_group'); ?>
 
-                <table class="form-table">
+                <div class="tit-20260606-settings-grid">
 
-                    <tr>
-                        <th scope="row">تصویر پیش‌فرض نمونه کار</th>
-                        <td>
+                    <section class="tit-20260606-card">
+                        <h2>تصاویر پیش‌فرض</h2>
+                        <p class="tit-20260606-card-desc">
+                            اگر برای نمونه کار یا هیرو تصویری انتخاب نشده باشد، این تصاویر استفاده می‌شوند.
+                        </p>
+
+                        <div class="tit-20260606-field">
+                            <label>تصویر پیش‌فرض نمونه کار</label>
                             <?php $this->render_media_field('default_image', (int) $default_image); ?>
-                        </td>
-                    </tr>
+                        </div>
 
-                    <tr>
-                        <th scope="row">تصویر پیش‌فرض هیرو</th>
-                        <td>
+                        <div class="tit-20260606-field">
+                            <label>تصویر پیش‌فرض هیرو</label>
                             <?php $this->render_media_field('default_hero_image', (int) $default_hero_image); ?>
-                        </td>
-                    </tr>
+                        </div>
 
-                    <tr>
-                        <th scope="row">تصویر هیرو آرشیو نمونه کارها</th>
-                        <td>
+                        <div class="tit-20260606-field">
+                            <label>تصویر هیرو آرشیو نمونه کارها</label>
                             <?php $this->render_media_field('archive_hero_image', (int) $archive_hero_image); ?>
-                        </td>
-                    </tr>
+                        </div>
+                    </section>
 
-                    <tr>
-                        <th scope="row">متن دکمه مشاوره</th>
-                        <td>
-                            <input type="text"
+                    <section class="tit-20260606-card">
+                        <h2>دکمه مشاوره</h2>
+                        <p class="tit-20260606-card-desc">
+                            متن و لینک دکمه مشاوره در بخش‌های هیرو استفاده می‌شود.
+                        </p>
+
+                        <div class="tit-20260606-field">
+                            <label for="tit-20260606-button-text">متن دکمه مشاوره</label>
+                            <input id="tit-20260606-button-text"
+                                   type="text"
                                    name="<?php echo esc_attr($this->option_name); ?>[consultation_button_text]"
                                    value="<?php echo esc_attr($button_text); ?>"
                                    class="regular-text">
-                        </td>
-                    </tr>
+                        </div>
 
-                    <tr>
-                        <th scope="row">لینک دکمه مشاوره</th>
-                        <td>
-                            <input type="url"
+                        <div class="tit-20260606-field">
+                            <label for="tit-20260606-button-url">لینک دکمه مشاوره</label>
+                            <input id="tit-20260606-button-url"
+                                   type="url"
                                    name="<?php echo esc_attr($this->option_name); ?>[consultation_button_url]"
                                    value="<?php echo esc_url($button_url); ?>"
                                    class="regular-text">
-                        </td>
-                    </tr>
+                        </div>
+                    </section>
 
-                    <tr>
-                        <th scope="row">تعداد پیش‌فرض نمایش</th>
-                        <td>
-                            <input type="number"
+                    <section class="tit-20260606-card">
+                        <h2>نمایش نمونه کارها</h2>
+                        <p class="tit-20260606-card-desc">
+                            تعداد پیش‌فرض آیتم‌هایی که در لیست‌های نمونه کار نمایش داده می‌شود.
+                        </p>
+
+                        <div class="tit-20260606-field">
+                            <label for="tit-20260606-latest-count">تعداد پیش‌فرض نمایش</label>
+                            <input id="tit-20260606-latest-count"
+                                   type="number"
                                    name="<?php echo esc_attr($this->option_name); ?>[latest_posts_count]"
                                    value="<?php echo esc_attr($latest_posts_count); ?>"
                                    min="1"
                                    max="24">
-                        </td>
-                    </tr>
+                        </div>
+                    </section>
 
-                </table>
+                </div>
 
-                <?php submit_button('ذخیره تنظیمات'); ?>
+                <div class="tit-20260606-submit">
+                    <?php submit_button('ذخیره تنظیمات'); ?>
+                </div>
+
             </form>
         </div>
 
@@ -163,19 +190,23 @@ class TIT_20260606_Settings {
                    value="<?php echo esc_attr($image_id); ?>"
                    class="tit-20260606-media-id">
 
-            <div class="tit-20260606-media-preview" style="margin-bottom:10px;">
+            <div class="tit-20260606-media-preview">
                 <?php if ($image_url) : ?>
-                    <img src="<?php echo esc_url($image_url); ?>" style="max-width:150px;height:auto;">
+                    <img src="<?php echo esc_url($image_url); ?>" alt="">
+                <?php else : ?>
+                    <span>تصویری انتخاب نشده است</span>
                 <?php endif; ?>
             </div>
 
-            <button type="button" class="button tit-20260606-select-media">
-                انتخاب تصویر
-            </button>
+            <div class="tit-20260606-media-actions">
+                <button type="button" class="button tit-20260606-select-media">
+                    انتخاب تصویر
+                </button>
 
-            <button type="button" class="button tit-20260606-remove-media">
-                حذف تصویر
-            </button>
+                <button type="button" class="button tit-20260606-remove-media">
+                    حذف تصویر
+                </button>
+            </div>
 
         </div>
 

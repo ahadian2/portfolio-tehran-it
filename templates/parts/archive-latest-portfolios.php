@@ -57,14 +57,14 @@ $title_id = 'latest-portfolios-title';
 
                 <div role="list"
                      aria-label="لیست جدیدترین نمونه‌کارهای تهران آی تی"
-                     class="owl-4box owl-carousel owl-theme box-post box-post-img-full box-post-p-3 box-post-bg-light owl-remove-dots">
+                     class="owl-4box owl-carousel owl-theme box-post box-post-img-200 box-post-p-3 box-post-bg-light owl-remove-dots">
 
                     <?php $position = 1; ?>
 
                     <?php while ($latest_query->have_posts()) : ?>
                         <?php $latest_query->the_post(); ?>
 
-                        <article class="item"
+                        <article class="item pt-2"
                                  role="listitem"
                                  itemprop="itemListElement"
                                  itemscope
@@ -102,8 +102,8 @@ $title_id = 'latest-portfolios-title';
                                         ?>
 
                                         <img src="<?php echo esc_url($default_image_url); ?>"
-                                             width="261"
-                                             height="147"
+                                             width="200"
+                                             height="113"
                                              loading="lazy"
                                              decoding="async"
                                              alt="<?php echo esc_attr('تصویر نمونه‌کار ' . get_the_title()); ?>">

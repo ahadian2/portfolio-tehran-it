@@ -17,7 +17,7 @@ class TIT_20260606_Post_Type {
         $labels = [
             'name'                  => 'نمونه کارها',
             'singular_name'         => 'نمونه کار',
-            'menu_name'             => 'نمونه کارها',
+            'menu_name'             => 'TehranIT portfolio',
             'name_admin_bar'        => 'نمونه کار',
             'add_new'               => 'افزودن',
             'add_new_item'          => 'افزودن نمونه کار جدید',
