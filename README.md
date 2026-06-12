@@ -73,25 +73,25 @@ The plugin provides a modern portfolio architecture based on:
 
 ## Screenshots
 
-### Portfolio Archive
+### Portfolio
 
-![Portfolio Archive](docs/screenshots/screenshot-1.png)
-
-### Single Portfolio Page
-
-![Single Portfolio](docs/screenshots/screenshot-2.png)
+![Portfolio](docs/screenshots/screenshot-1.png)
 
 ### Portfolio Categories
 
-![Portfolio Categories](docs/screenshots/screenshot-3.png)
+![Portfolio Categories](docs/screenshots/screenshot-2.png)
 
-### Project Gallery
+### Single Portfolio Page
 
-![Project Gallery](docs/screenshots/screenshot-4.png)
+![Single Portfolio Page](docs/screenshots/screenshot-3.png)
 
-### Project Video
+### Portfolio Settings
 
-![Project Video](docs/screenshots/screenshot-5.png)
+![Portfolio Settings](docs/screenshots/screenshot-4.png)
+
+### Portfolio documentation
+
+![Portfolio documentation](docs/screenshots/screenshot-5.png)
 
 ---
 

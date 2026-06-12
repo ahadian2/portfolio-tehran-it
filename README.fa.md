@@ -71,25 +71,25 @@
 
 ## تصاویر
 
-### آرشیو نمونه کارها
+### صفحه اصلی نمونه کارها
 
-![آرشیو نمونه کارها](docs/screenshots/screenshot-1.png)
-
-### صفحه تکی نمونه کار
-
-![صفحه تکی نمونه کار](docs/screenshots/screenshot-2.png)
+![صفحه اصلی نمونه کارها](docs/screenshots/screenshot-1.png)
 
 ### دسته‌بندی نمونه کارها
 
-![دسته‌بندی نمونه کارها](docs/screenshots/screenshot-3.png)
+![دسته‌بندی نمونه کارها](docs/screenshots/screenshot-2.png)
 
-### گالری تصاویر پروژه
+### صفحه نمونه کارها
 
-![گالری تصاویر پروژه](docs/screenshots/screenshot-4.png)
+![صفحه نمونه کارها](docs/screenshots/screenshot-3.png)
 
-### ویدیوی پروژه
+### تنظیمات نمونه کارها
 
-![ویدیوی پروژه](docs/screenshots/screenshot-5.png)
+![تنظیمات نمونه کارها](docs/screenshots/screenshot-4.png)
+
+### مستندات نمونه کارها
+
+![مستندات نمونه کارها](docs/screenshots/screenshot-5.png)
 
 ---
 
