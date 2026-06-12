@@ -289,7 +289,7 @@ set_query_var(
 include TIT_20260606_DIR . 'templates/parts/portfolio-list.php';
 ```
 
-Display portfolio categories:
+Display portfolio slider categories:
 
 ```php
 set_query_var(
@@ -303,6 +303,26 @@ set_query_var(
 );
 
 include TIT_20260606_DIR . 'templates/parts/portfolio-categories-list.php';
+```
+
+Display portfolio grid categories:
+
+```php
+set_query_var(
+    'section_title',
+    'دسته‌بندی نمونه کارها'
+);
+
+set_query_var(
+    'section_description',
+    'از بین دسته‌بندی‌های زیر، نمونه کارهای مرتبط با نیاز خود را مشاهده کنید.'
+);
+
+set_query_var('section_bg', 'light');
+set_query_var('post_bg', 'dark');
+set_query_var('hide_empty', false);
+
+include TIT_20260606_DIR . 'templates/parts/portfolio-categories-grid.php';
 ```
 
 ---

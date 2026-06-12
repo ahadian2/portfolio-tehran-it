@@ -180,8 +180,39 @@ include TIT_20260606_DIR . 'templates/parts/portfolio-categories-list.php';
 "); ?></code></pre>
                 </section>
 
+
+                <section class="tit-20260606-card tit-20260606-card-wide">
+                    <h2>7. نمایش دسته‌بندی‌های نمونه کارها (گرید)</h2>
+                
+                    <p>
+                        برای نمایش دسته‌بندی‌ها به صورت گرید چهار ستونه با تصاویر مربعی از Template زیر استفاده کنید.
+                    </p>
+                
+                    <pre><code><?php echo esc_html("
+                set_query_var('section_title', 'دسته‌بندی نمونه کارها');
+                
+                set_query_var(
+                    'section_description',
+                    'از بین دسته‌بندی‌های زیر، نمونه کارهای مرتبط با نیاز خود را مشاهده کنید.'
+                );
+                
+                set_query_var('section_bg', 'light');
+                set_query_var('post_bg', 'dark');
+                set_query_var('hide_empty', false);
+                
+                include TIT_20260606_DIR . 'templates/parts/portfolio-categories-grid.php';
+                "); ?></code></pre>
+                
+                    <p>
+                        این Template از تصویر دسته‌بندی
+                        <code>tit_20260606_category_image</code>
+                        استفاده می‌کند و دسته‌ها را به صورت گرید نمایش می‌دهد.
+                    </p>
+                </section>
+
+
                 <section class="tit-20260606-card">
-                    <h2>7. تنظیمات پلاگین</h2>
+                    <h2>8. تنظیمات پلاگین</h2>
 
                     <p>
                         در بخش «تنظیمات» می‌توانید موارد زیر را مدیریت کنید:
@@ -198,7 +229,7 @@ include TIT_20260606_DIR . 'templates/parts/portfolio-categories-list.php';
                 </section>
 
                 <section class="tit-20260606-card">
-                    <h2>8. لینک‌های پیشنهادی</h2>
+                    <h2>9. لینک‌های پیشنهادی</h2>
 
                     <ul>
                         <li><code>/portfolio/</code> صفحه اصلی نمونه کارها</li>
