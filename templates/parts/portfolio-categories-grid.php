@@ -48,6 +48,8 @@ $total_items = count($terms);
 $section_id = get_query_var('section_id', 'portfolio-categories-grid');
 $title_id = $section_id . '-title';
 $desc_id = $section_id . '-desc';
+
+$default_image_url = trailingslashit(TIT_20260606_URL) . 'assets/img/no-image.webp';
 ?>
 
 <section class="sec sec-bg-<?php echo esc_attr($valid_section_bg); ?> sec-pt-5 sec-pb-5"
@@ -104,12 +106,7 @@ $desc_id = $section_id . '-desc';
                     );
                 }
 
-                $image_url = tit_20260606_get_setting_image_url(
-                    'default_image',
-                    'img-200-200',
-                    TIT_20260606_URL . 'assets/img/no-image.webp'
-                );
-
+                $image_url = $default_image_url;
                 $image_srcset = '';
 
                 if (!empty($image_id)) {
@@ -118,14 +115,18 @@ $desc_id = $section_id . '-desc';
                         'img-200-200'
                     );
 
-                    if (!empty($image_src[0])) {
+                    if (is_array($image_src) && !empty($image_src[0])) {
                         $image_url = $image_src[0];
-                    }
 
-                    $image_srcset = wp_get_attachment_image_srcset(
-                        (int) $image_id,
-                        'img-200-200'
-                    );
+                        $image_srcset = wp_get_attachment_image_srcset(
+                            (int) $image_id,
+                            'img-200-200'
+                        );
+
+                        if (empty($image_srcset)) {
+                            $image_srcset = '';
+                        }
+                    }
                 }
 
                 $description = term_description(
@@ -192,7 +193,8 @@ $desc_id = $section_id . '-desc';
                                      height="150"
                                      loading="lazy"
                                      decoding="async"
-                                     itemprop="image">
+                                     itemprop="image"
+                                     onerror="this.onerror=null;this.src='<?php echo esc_url($default_image_url); ?>';">
                             </figure>
 
                             <div class="description pb-3 pt-1">

@@ -61,7 +61,6 @@ $section_id = 'portfolio-list-' . sanitize_title($portfolio_category ?: 'latest'
 $title_id = $section_id . '-title';
 $desc_id = $section_id . '-desc';
 ?>
-
 <section class="sec sec-bg-<?php echo esc_attr($valid_section_bg); ?> sec-pt-5 sec-pb-5"
          id="<?php echo esc_attr($section_id); ?>"
          aria-labelledby="<?php echo esc_attr($title_id); ?>"

@@ -57,7 +57,7 @@ $total_items = count($all_categories);
                         $image_url = tit_20260606_get_setting_image_url(
                             'default_image',
                             'img-200-200',
-                            TIT_20260606_URL . 'assets/defaults/no-image-120-120.webp'
+                            TIT_20260606_URL . 'assets/img/no-image.webp'
                         );
 
                         if (!empty($card_image_id)) {
